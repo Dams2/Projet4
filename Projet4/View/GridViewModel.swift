@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+final class GridViewModel {
+    
+    enum Spot {
+        case top, topLeft, topRight, bottom, bottomLeft, bottomRight
+    }
+    
+     // Mark: - Outputs
+    
+    var selectedSpot: ((Spot) -> Void)?
+    
+     // Mark: - Inputs
+    
+    func didSelectSpot(at index: Int) {
+        
+    }
+}

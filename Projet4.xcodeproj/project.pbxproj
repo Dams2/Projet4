@@ -13,10 +13,19 @@
 		9179DBD722F4980A00326069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9179DBD522F4980A00326069 /* Main.storyboard */; };
 		9179DBD922F4980D00326069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9179DBD822F4980D00326069 /* Assets.xcassets */; };
 		9179DBDC22F4980D00326069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9179DBDA22F4980D00326069 /* LaunchScreen.storyboard */; };
-		9179DBE722F4980D00326069 /* Projet4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179DBE622F4980D00326069 /* Projet4Tests.swift */; };
 		9179DBF622F4992000326069 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179DBF522F4992000326069 /* HomeViewController.swift */; };
 		9179DBF822F4993F00326069 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179DBF722F4993E00326069 /* HomeViewModel.swift */; };
 		9179DBFC22F4996E00326069 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179DBFB22F4996E00326069 /* GridViewModel.swift */; };
+		91936CC9230EC07A0036074B /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CC8230EC07A0036074B /* HomeViewModelTests.swift */; };
+		91936CCB230EC4490036074B /* FirstGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91936CCA230EC4490036074B /* FirstGrid.xib */; };
+		91936CCD230F037D0036074B /* SecondGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91936CCC230F037D0036074B /* SecondGrid.xib */; };
+		91936CCF230F03B80036074B /* ThirdGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91936CCE230F03B80036074B /* ThirdGrid.xib */; };
+		91936CD1230F06660036074B /* FirstGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD0230F06660036074B /* FirstGrid.swift */; };
+		91936CD2230F06660036074B /* FirstGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD0230F06660036074B /* FirstGrid.swift */; };
+		91936CD4230F067C0036074B /* SecondGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD3230F067C0036074B /* SecondGrid.swift */; };
+		91936CD5230F067C0036074B /* SecondGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD3230F067C0036074B /* SecondGrid.swift */; };
+		91936CD7230F06890036074B /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD6230F06890036074B /* ThirdGrid.swift */; };
+		91936CD8230F06890036074B /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD6230F06890036074B /* ThirdGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +48,18 @@
 		9179DBDB22F4980D00326069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9179DBDD22F4980D00326069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9179DBE222F4980D00326069 /* Projet4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Projet4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9179DBE622F4980D00326069 /* Projet4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projet4Tests.swift; sourceTree = "<group>"; };
 		9179DBE822F4980D00326069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9179DBF522F4992000326069 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9179DBF722F4993E00326069 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9179DBFB22F4996E00326069 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		91936CC7230EC0790036074B /* Projet4Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Projet4Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		91936CC8230EC07A0036074B /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		91936CCA230EC4490036074B /* FirstGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstGrid.xib; sourceTree = "<group>"; };
+		91936CCC230F037D0036074B /* SecondGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondGrid.xib; sourceTree = "<group>"; };
+		91936CCE230F03B80036074B /* ThirdGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdGrid.xib; sourceTree = "<group>"; };
+		91936CD0230F06660036074B /* FirstGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGrid.swift; sourceTree = "<group>"; };
+		91936CD3230F067C0036074B /* SecondGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrid.swift; sourceTree = "<group>"; };
+		91936CD6230F06890036074B /* ThirdGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +112,9 @@
 		9179DBE522F4980D00326069 /* Projet4Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9179DBE622F4980D00326069 /* Projet4Tests.swift */,
 				9179DBE822F4980D00326069 /* Info.plist */,
+				91936CC8230EC07A0036074B /* HomeViewModelTests.swift */,
+				91936CC7230EC0790036074B /* Projet4Tests-Bridging-Header.h */,
 			);
 			path = Projet4Tests;
 			sourceTree = "<group>";
@@ -146,6 +163,8 @@
 		9179DBFD22F4997200326069 /* First Grid */ = {
 			isa = PBXGroup;
 			children = (
+				91936CCA230EC4490036074B /* FirstGrid.xib */,
+				91936CD0230F06660036074B /* FirstGrid.swift */,
 			);
 			path = "First Grid";
 			sourceTree = "<group>";
@@ -153,6 +172,8 @@
 		9179DBFE22F4998800326069 /* Second Grid */ = {
 			isa = PBXGroup;
 			children = (
+				91936CCC230F037D0036074B /* SecondGrid.xib */,
+				91936CD3230F067C0036074B /* SecondGrid.swift */,
 			);
 			path = "Second Grid";
 			sourceTree = "<group>";
@@ -160,6 +181,8 @@
 		9179DBFF22F4999100326069 /* Third Grid */ = {
 			isa = PBXGroup;
 			children = (
+				91936CCE230F03B80036074B /* ThirdGrid.xib */,
+				91936CD6230F06890036074B /* ThirdGrid.swift */,
 			);
 			path = "Third Grid";
 			sourceTree = "<group>";
@@ -217,6 +240,7 @@
 					};
 					9179DBE122F4980D00326069 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = 9179DBCD22F4980A00326069;
 					};
 				};
@@ -247,9 +271,12 @@
 			files = (
 				9179DBDC22F4980D00326069 /* LaunchScreen.storyboard in Resources */,
 				9179DBD922F4980D00326069 /* Assets.xcassets in Resources */,
+				91936CCB230EC4490036074B /* FirstGrid.xib in Resources */,
+				91936CCD230F037D0036074B /* SecondGrid.xib in Resources */,
 				910BFB4523042B1300DB0915 /* ThirstySoftRegular.otf in Resources */,
 				910BFB4323042B0100DB0915 /* Delm-Medium.otf in Resources */,
 				9179DBD722F4980A00326069 /* Main.storyboard in Resources */,
+				91936CCF230F03B80036074B /* ThirdGrid.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91936CD1230F06660036074B /* FirstGrid.swift in Sources */,
 				9179DBD222F4980A00326069 /* AppDelegate.swift in Sources */,
 				9179DBF622F4992000326069 /* HomeViewController.swift in Sources */,
 				9179DBFC22F4996E00326069 /* GridViewModel.swift in Sources */,
 				9179DBF822F4993F00326069 /* HomeViewModel.swift in Sources */,
+				91936CD4230F067C0036074B /* SecondGrid.swift in Sources */,
+				91936CD7230F06890036074B /* ThirdGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9179DBE722F4980D00326069 /* Projet4Tests.swift in Sources */,
+				91936CD2230F06660036074B /* FirstGrid.swift in Sources */,
+				91936CC9230EC07A0036074B /* HomeViewModelTests.swift in Sources */,
+				91936CD5230F067C0036074B /* SecondGrid.swift in Sources */,
+				91936CD8230F06890036074B /* ThirdGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +504,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SPYXZN2GGQ;
 				INFOPLIST_FILE = Projet4Tests/Info.plist;
@@ -481,6 +515,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Projet4Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Projet4Tests/Projet4Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Projet4.app/Projet4";
@@ -492,6 +528,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SPYXZN2GGQ;
 				INFOPLIST_FILE = Projet4Tests/Info.plist;
@@ -502,6 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Projet4Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Projet4Tests/Projet4Tests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Projet4.app/Projet4";

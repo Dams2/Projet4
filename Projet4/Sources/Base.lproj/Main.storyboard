@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="3Ek-z4-8Qj">
             <objects>
-                <viewController id="djS-tj-UvF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IEL-HN-grZ" customClass="HomeViewController">
+                <viewController id="djS-tj-UvF" customClass="HomeViewController" customModule="Projet4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEL-HN-grZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -65,7 +65,7 @@
                                         </constraints>
                                         <state key="normal" image="Layout 1"/>
                                         <connections>
-                                            <action selector="didPressFirstGridButton:" destination="IEL-HN-grZ" eventType="touchUpInside" id="stg-za-Xcy"/>
+                                            <action selector="didPressFirstGridButton:" destination="djS-tj-UvF" eventType="touchUpInside" id="eKB-N8-QqN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqn-UO-d0b" userLabel="Second Grid Button">
@@ -76,7 +76,7 @@
                                         </constraints>
                                         <state key="normal" image="Layout 2"/>
                                         <connections>
-                                            <action selector="didPressSecondGridButton:" destination="IEL-HN-grZ" eventType="touchUpInside" id="7d7-p7-FOi"/>
+                                            <action selector="didPressSecondGridButton:" destination="djS-tj-UvF" eventType="touchUpInside" id="yPr-IO-635"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTf-ef-sxE" userLabel="Third Grid Button">
@@ -87,7 +87,7 @@
                                         </constraints>
                                         <state key="normal" image="Layout 3"/>
                                         <connections>
-                                            <action selector="didPressThirdGridButton:" destination="IEL-HN-grZ" eventType="touchUpInside" id="9aK-GE-Yfg"/>
+                                            <action selector="didPressThirdGridButton:" destination="djS-tj-UvF" eventType="touchUpInside" id="08J-YZ-8v8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -200,13 +200,13 @@
                                 <exclude reference="pFD-dj-i3Q"/>
                                 <exclude reference="tvl-gn-ayl"/>
                                 <exclude reference="zWM-LK-W7K"/>
+                                <exclude reference="HCk-hY-MMO"/>
+                                <exclude reference="JpP-ik-jew"/>
+                                <exclude reference="LDd-wB-2Po"/>
                                 <exclude reference="EQK-np-xq9"/>
                                 <exclude reference="FMY-Dn-5Lb"/>
                                 <exclude reference="rra-aD-ML7"/>
                                 <exclude reference="spJ-fb-p7a"/>
-                                <exclude reference="HCk-hY-MMO"/>
-                                <exclude reference="JpP-ik-jew"/>
-                                <exclude reference="LDd-wB-2Po"/>
                                 <exclude reference="iIf-Mq-2Fk"/>
                                 <exclude reference="qy9-Pq-TOD"/>
                             </mask>
@@ -223,10 +223,10 @@
                                 <include reference="pFD-dj-i3Q"/>
                                 <exclude reference="tvl-gn-ayl"/>
                                 <exclude reference="zWM-LK-W7K"/>
+                                <include reference="LDd-wB-2Po"/>
                                 <exclude reference="EQK-np-xq9"/>
                                 <include reference="FMY-Dn-5Lb"/>
                                 <exclude reference="spJ-fb-p7a"/>
-                                <include reference="LDd-wB-2Po"/>
                                 <include reference="iIf-Mq-2Fk"/>
                             </mask>
                         </variation>
@@ -241,9 +241,9 @@
                                 <exclude reference="gBo-kf-Kdq"/>
                                 <exclude reference="k4r-pS-aRU"/>
                                 <exclude reference="paU-cs-jnv"/>
-                                <include reference="rra-aD-ML7"/>
                                 <include reference="HCk-hY-MMO"/>
                                 <include reference="JpP-ik-jew"/>
+                                <include reference="rra-aD-ML7"/>
                                 <include reference="qy9-Pq-TOD"/>
                             </mask>
                         </variation>
@@ -254,21 +254,21 @@
                                 <exclude reference="VAh-TF-l9u"/>
                                 <exclude reference="Zpy-g4-l0y"/>
                                 <exclude reference="zWM-LK-W7K"/>
-                                <exclude reference="rra-aD-ML7"/>
                                 <exclude reference="JpP-ik-jew"/>
+                                <exclude reference="rra-aD-ML7"/>
                                 <exclude reference="qy9-Pq-TOD"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outlet property="directionLabel" destination="MV0-dT-T18" id="yXp-sz-xJg"/>
-                            <outlet property="firstGridButton" destination="ywp-hH-24h" id="myg-Vq-fLN"/>
-                            <outlet property="gridContainer" destination="ceJ-2d-R3b" id="7YE-qe-tlq"/>
-                            <outlet property="secondGridButton" destination="Pqn-UO-d0b" id="ICr-QI-F9j"/>
-                            <outlet property="swipeDirectionLabel" destination="bHf-Ea-USv" id="GqM-G7-0YU"/>
-                            <outlet property="thirdGridButton" destination="OTf-ef-sxE" id="8MS-qW-6RB"/>
-                            <outlet property="titleLabel" destination="85b-No-8R9" id="ppJ-Ly-AZ4"/>
-                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="directionLabel" destination="MV0-dT-T18" id="vjF-HQ-00R"/>
+                        <outlet property="firstGridButton" destination="ywp-hH-24h" id="yPk-ei-aRJ"/>
+                        <outlet property="gridContainer" destination="ceJ-2d-R3b" id="mcS-CE-YVk"/>
+                        <outlet property="secondGridButton" destination="Pqn-UO-d0b" id="NGP-q2-Si9"/>
+                        <outlet property="swipeDirectionLabel" destination="bHf-Ea-USv" id="qdB-AE-eCU"/>
+                        <outlet property="thirdGridButton" destination="OTf-ef-sxE" id="pYe-Ly-Vnf"/>
+                        <outlet property="titleLabel" destination="85b-No-8R9" id="FsI-nL-6Q0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMU-oA-rrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

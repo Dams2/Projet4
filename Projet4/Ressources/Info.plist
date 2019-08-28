@@ -41,5 +41,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ThirstySoftRegular.otf</string>
+		<string>Delm-Medium.otf</string>
+	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Instagrid a besoin de votre autorisation pour accèder à vos photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Vous pouvez selectionner des photos pour créer une grid</string>
 </dict>
 </plist>

@@ -10,111 +10,135 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdGrid">
+            <connections>
+                <outlet property="bottomLeftButton" destination="rph-Zm-odM" id="U6u-bL-Tf6"/>
+                <outlet property="bottomLeftPictureView" destination="2ik-d5-HgS" id="rv3-Jc-0bq"/>
+                <outlet property="bottomRightButton" destination="QDe-xc-NYp" id="f16-xb-98u"/>
+                <outlet property="bottomRightPictureView" destination="dQI-za-1ZZ" id="G0g-Cc-czJ"/>
+                <outlet property="contentView" destination="HO7-IV-Oqw" id="ZZc-rP-HQM"/>
+                <outlet property="upperLeftButton" destination="4Sb-wy-MkE" id="tFF-4z-DhW"/>
+                <outlet property="upperLeftPictureView" destination="k0l-vb-Tv9" id="wrc-Kb-bsy"/>
+                <outlet property="upperRightButton" destination="Dgz-iv-j21" id="1e9-CD-p7x"/>
+                <outlet property="upperRightPictureView" destination="bfO-Ju-Dyg" id="EIS-Sz-IjN"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="HO7-IV-Oqw" userLabel="ContentView" customClass="ThirdGrid">
+        <view contentMode="scaleToFill" id="HO7-IV-Oqw" userLabel="ContentView">
             <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0l-vb-Tv9" userLabel="Upper Left Picture View">
-                    <rect key="frame" x="14" y="14" width="119" height="119"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0rG-Bx-T0D">
+                    <rect key="frame" x="14" y="14" width="252" height="252"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sb-wy-MkE" userLabel="Upper Left Button">
-                            <rect key="frame" x="8" y="8" width="103" height="103"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="DvF-1R-mP5">
+                            <rect key="frame" x="0.0" y="0.0" width="252" height="119"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0l-vb-Tv9" userLabel="Upper Left Picture View">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sb-wy-MkE" userLabel="Upper Left Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="selectSpot:" destination="-1" eventType="touchUpInside" id="Uve-4z-8oB"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="4Sb-wy-MkE" firstAttribute="leading" secondItem="k0l-vb-Tv9" secondAttribute="leading" id="Atj-s3-zkQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="4Sb-wy-MkE" secondAttribute="bottom" id="Odd-h9-i6a"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Sb-wy-MkE" secondAttribute="trailing" id="Q6Z-vZ-u3V"/>
+                                        <constraint firstItem="4Sb-wy-MkE" firstAttribute="top" secondItem="k0l-vb-Tv9" secondAttribute="top" id="kGx-sf-v8F"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfO-Ju-Dyg" userLabel="Upper Right Picture View">
+                                    <rect key="frame" x="133" y="0.0" width="119" height="119"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgz-iv-j21" userLabel="Upper Right Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="selectSpot:" destination="-1" eventType="touchUpInside" id="JUO-L2-Tvh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Dgz-iv-j21" secondAttribute="trailing" id="E6p-wC-fFq"/>
+                                        <constraint firstItem="Dgz-iv-j21" firstAttribute="leading" secondItem="bfO-Ju-Dyg" secondAttribute="leading" id="POk-r4-oXV"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dgz-iv-j21" secondAttribute="bottom" id="UOM-US-p7J"/>
+                                        <constraint firstItem="Dgz-iv-j21" firstAttribute="top" secondItem="bfO-Ju-Dyg" secondAttribute="top" id="Y6V-SE-WEk"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="width" constant="103" id="28a-Jr-su1"/>
-                                <constraint firstAttribute="height" constant="103" id="5Mx-8S-7bZ"/>
+                                <constraint firstItem="bfO-Ju-Dyg" firstAttribute="width" secondItem="k0l-vb-Tv9" secondAttribute="width" id="Y81-hz-LU3"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
-                            <state key="normal" title="+"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="4Sb-wy-MkE" firstAttribute="centerX" secondItem="k0l-vb-Tv9" secondAttribute="centerX" id="SCm-hr-QBl"/>
-                        <constraint firstAttribute="height" constant="119" id="afs-Db-bNx"/>
-                        <constraint firstAttribute="width" constant="119" id="c6K-1Q-QYz"/>
-                        <constraint firstItem="4Sb-wy-MkE" firstAttribute="centerY" secondItem="k0l-vb-Tv9" secondAttribute="centerY" id="p55-ul-fk8"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfO-Ju-Dyg" userLabel="Upper Right Picture View">
-                    <rect key="frame" x="147" y="14" width="119" height="119"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgz-iv-j21" userLabel="Upper Right Button">
-                            <rect key="frame" x="8" y="8" width="103" height="103"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="RVz-Cu-TAi">
+                            <rect key="frame" x="0.0" y="133" width="252" height="119"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ik-d5-HgS" userLabel="Bottom Left Picture View">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rph-Zm-odM" userLabel="Bottom Left Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="selectSpot:" destination="-1" eventType="touchUpInside" id="GfI-Qb-26M"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="rph-Zm-odM" firstAttribute="leading" secondItem="2ik-d5-HgS" secondAttribute="leading" id="3te-Il-e6U"/>
+                                        <constraint firstAttribute="bottom" secondItem="rph-Zm-odM" secondAttribute="bottom" id="LZF-VE-7vz"/>
+                                        <constraint firstAttribute="trailing" secondItem="rph-Zm-odM" secondAttribute="trailing" id="S06-RS-zlP"/>
+                                        <constraint firstItem="rph-Zm-odM" firstAttribute="top" secondItem="2ik-d5-HgS" secondAttribute="top" id="pKX-VA-bu3"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQI-za-1ZZ" userLabel="Bottom Right Picture View">
+                                    <rect key="frame" x="133" y="0.0" width="119" height="119"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-xc-NYp" userLabel="Bottom Right Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="selectSpot:" destination="-1" eventType="touchUpInside" id="Rlh-aZ-D0J"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="QDe-xc-NYp" firstAttribute="leading" secondItem="dQI-za-1ZZ" secondAttribute="leading" id="0UL-Iu-CBR"/>
+                                        <constraint firstAttribute="bottom" secondItem="QDe-xc-NYp" secondAttribute="bottom" id="Kgd-1j-Zc2"/>
+                                        <constraint firstAttribute="trailing" secondItem="QDe-xc-NYp" secondAttribute="trailing" id="UEq-qY-gSw"/>
+                                        <constraint firstItem="QDe-xc-NYp" firstAttribute="top" secondItem="dQI-za-1ZZ" secondAttribute="top" id="y75-oJ-XBm"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="103" id="9nq-vG-fzL"/>
-                                <constraint firstAttribute="width" constant="103" id="soZ-eg-nIp"/>
+                                <constraint firstItem="dQI-za-1ZZ" firstAttribute="width" secondItem="2ik-d5-HgS" secondAttribute="width" id="XWX-1h-CDA"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
-                            <state key="normal" title="+"/>
-                        </button>
+                        </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="Dgz-iv-j21" firstAttribute="centerY" secondItem="bfO-Ju-Dyg" secondAttribute="centerY" id="BSn-wl-lLe"/>
-                        <constraint firstAttribute="height" constant="119" id="qfZ-Ok-H6y"/>
-                        <constraint firstAttribute="width" constant="119" id="tzE-YN-Ttv"/>
-                        <constraint firstItem="Dgz-iv-j21" firstAttribute="centerX" secondItem="bfO-Ju-Dyg" secondAttribute="centerX" id="xbe-iv-Pym"/>
+                        <constraint firstItem="RVz-Cu-TAi" firstAttribute="height" secondItem="DvF-1R-mP5" secondAttribute="height" id="aHi-mK-abq"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQI-za-1ZZ" userLabel="Bottom Right Picture View">
-                    <rect key="frame" x="147" y="147" width="119" height="119"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-xc-NYp" userLabel="Bottom Right Button">
-                            <rect key="frame" x="8" y="8" width="103" height="103"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="103" id="6A8-85-4pj"/>
-                                <constraint firstAttribute="width" constant="103" id="hhQ-pY-Lrb"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
-                            <state key="normal" title="+"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="QDe-xc-NYp" firstAttribute="centerX" secondItem="dQI-za-1ZZ" secondAttribute="centerX" id="BJO-u1-6sC"/>
-                        <constraint firstAttribute="width" constant="119" id="RwJ-VT-ITb"/>
-                        <constraint firstItem="QDe-xc-NYp" firstAttribute="centerY" secondItem="dQI-za-1ZZ" secondAttribute="centerY" id="qup-V9-OUr"/>
-                        <constraint firstAttribute="height" constant="119" id="vA9-zm-84d"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ik-d5-HgS" userLabel="Bottom Left Picture View">
-                    <rect key="frame" x="14" y="147" width="119" height="119"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rph-Zm-odM" userLabel="Bottom Left Button">
-                            <rect key="frame" x="8" y="8" width="103" height="103"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="103" id="RHp-04-c5n"/>
-                                <constraint firstAttribute="height" constant="103" id="nbg-ge-ac2"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
-                            <state key="normal" title="+"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="119" id="RVg-Yh-qds"/>
-                        <constraint firstItem="rph-Zm-odM" firstAttribute="centerY" secondItem="2ik-d5-HgS" secondAttribute="centerY" id="Vaq-9e-z8j"/>
-                        <constraint firstAttribute="height" constant="119" id="acn-s2-AEb"/>
-                        <constraint firstItem="rph-Zm-odM" firstAttribute="centerX" secondItem="2ik-d5-HgS" secondAttribute="centerX" id="amv-mW-Boa"/>
-                    </constraints>
-                </view>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="0.06330176442861557" green="0.40020579099655151" blue="0.59554183483123779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="dQI-za-1ZZ" firstAttribute="top" secondItem="bfO-Ju-Dyg" secondAttribute="bottom" constant="14" id="0bs-ln-NeI"/>
-                <constraint firstItem="k0l-vb-Tv9" firstAttribute="leading" secondItem="f0t-8v-KY9" secondAttribute="leading" constant="14" id="6Ad-za-Bfs"/>
-                <constraint firstItem="k0l-vb-Tv9" firstAttribute="top" secondItem="f0t-8v-KY9" secondAttribute="top" constant="14" id="8WI-2F-jAT"/>
-                <constraint firstItem="f0t-8v-KY9" firstAttribute="bottom" secondItem="dQI-za-1ZZ" secondAttribute="bottom" constant="14" id="R9b-K6-9nJ"/>
-                <constraint firstItem="bfO-Ju-Dyg" firstAttribute="top" secondItem="f0t-8v-KY9" secondAttribute="top" constant="14" id="V9X-gU-QoI"/>
-                <constraint firstItem="dQI-za-1ZZ" firstAttribute="leading" secondItem="2ik-d5-HgS" secondAttribute="trailing" constant="14" id="Z9p-bj-bc0"/>
-                <constraint firstItem="f0t-8v-KY9" firstAttribute="trailing" secondItem="bfO-Ju-Dyg" secondAttribute="trailing" constant="14" id="fU2-4N-01G"/>
-                <constraint firstItem="2ik-d5-HgS" firstAttribute="leading" secondItem="f0t-8v-KY9" secondAttribute="leading" constant="14" id="feN-6k-fN4"/>
-                <constraint firstItem="f0t-8v-KY9" firstAttribute="bottom" secondItem="2ik-d5-HgS" secondAttribute="bottom" constant="14" id="q5K-72-CFc"/>
-                <constraint firstItem="2ik-d5-HgS" firstAttribute="top" secondItem="k0l-vb-Tv9" secondAttribute="bottom" constant="14" id="suK-5H-vss"/>
-                <constraint firstItem="bfO-Ju-Dyg" firstAttribute="leading" secondItem="k0l-vb-Tv9" secondAttribute="trailing" constant="14" id="yvW-ko-FBM"/>
-                <constraint firstItem="f0t-8v-KY9" firstAttribute="trailing" secondItem="dQI-za-1ZZ" secondAttribute="trailing" constant="14" id="zsw-hV-eOe"/>
+                <constraint firstItem="0rG-Bx-T0D" firstAttribute="top" secondItem="HO7-IV-Oqw" secondAttribute="top" constant="14" id="fzm-j1-zoe"/>
+                <constraint firstAttribute="trailing" secondItem="0rG-Bx-T0D" secondAttribute="trailing" constant="14" id="hOZ-q3-TD7"/>
+                <constraint firstAttribute="bottom" secondItem="0rG-Bx-T0D" secondAttribute="bottom" constant="14" id="oid-29-UDt"/>
+                <constraint firstItem="0rG-Bx-T0D" firstAttribute="leading" secondItem="HO7-IV-Oqw" secondAttribute="leading" constant="14" id="wib-c3-p8H"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="f0t-8v-KY9"/>

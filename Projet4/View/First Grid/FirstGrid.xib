@@ -12,9 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstGrid">
             <connections>
-                <outlet property="bottomButton" destination="YNY-ZD-529" id="1cm-ud-B0c"/>
-                <outlet property="bottomPictureView" destination="Vri-cE-Ck6" id="vHq-nj-EH6"/>
-                <outlet property="upperLeftButton" destination="WRf-T1-M1A" id="ktU-v8-2Vr"/>
+                <outlet property="bottomButton" destination="YNY-ZD-529" id="JDC-SJ-T01"/>
+                <outlet property="bottomPictureView" destination="Vri-cE-Ck6" id="wBH-bc-45M"/>
+                <outlet property="contentView" destination="y1y-1k-jio" id="b1O-13-xBQ"/>
+                <outlet property="upperLeftButton" destination="WRf-T1-M1A" id="Zpa-Jm-AyM"/>
                 <outlet property="upperLeftPictureView" destination="MYh-wt-UCo" id="eWT-Ur-1aP"/>
                 <outlet property="upperRightButton" destination="w5J-fx-qCB" id="PsA-T6-yvC"/>
                 <outlet property="upperRightPictureView" destination="cyb-Jq-FAd" id="tGs-gc-mD5"/>
@@ -25,93 +26,92 @@
             <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vri-cE-Ck6" userLabel="Bottom Picture View">
-                    <rect key="frame" x="14" y="147" width="252" height="119"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="12b-Zu-9gb">
+                    <rect key="frame" x="14" y="14" width="252" height="252"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNY-ZD-529" userLabel="Bottom Button">
-                            <rect key="frame" x="8" y="8" width="236" height="103"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-II-W2Q">
+                            <rect key="frame" x="0.0" y="0.0" width="252" height="119"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYh-wt-UCo" userLabel="Upper Left Picture View">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRf-T1-M1A" userLabel="Upper Left Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="selectSpot:" destination="-1" eventType="touchUpInside" id="FxI-Dt-597"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="WRf-T1-M1A" firstAttribute="leading" secondItem="MYh-wt-UCo" secondAttribute="leading" id="532-9v-qhJ"/>
+                                        <constraint firstAttribute="width" secondItem="MYh-wt-UCo" secondAttribute="height" multiplier="1:1" id="5PZ-VT-zgS"/>
+                                        <constraint firstAttribute="bottom" secondItem="WRf-T1-M1A" secondAttribute="bottom" id="GBh-oa-tNo"/>
+                                        <constraint firstAttribute="trailing" secondItem="WRf-T1-M1A" secondAttribute="trailing" id="Veo-46-c4g"/>
+                                        <constraint firstItem="WRf-T1-M1A" firstAttribute="top" secondItem="MYh-wt-UCo" secondAttribute="top" id="qWM-vM-4Mm"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyb-Jq-FAd" userLabel="Upper Right Picture View">
+                                    <rect key="frame" x="133" y="0.0" width="119" height="119"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5J-fx-qCB" userLabel="Upper Right Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="selectSpot:" destination="-1" eventType="touchUpInside" id="o6q-dM-Ibn"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="w5J-fx-qCB" firstAttribute="top" secondItem="cyb-Jq-FAd" secondAttribute="top" id="21d-iO-Yde"/>
+                                        <constraint firstAttribute="bottom" secondItem="w5J-fx-qCB" secondAttribute="bottom" id="FRN-dh-4kD"/>
+                                        <constraint firstItem="w5J-fx-qCB" firstAttribute="leading" secondItem="cyb-Jq-FAd" secondAttribute="leading" id="XZc-6w-dBF"/>
+                                        <constraint firstAttribute="trailing" secondItem="w5J-fx-qCB" secondAttribute="trailing" id="bhT-de-h4I"/>
+                                        <constraint firstAttribute="width" secondItem="cyb-Jq-FAd" secondAttribute="height" multiplier="1:1" id="fKL-6M-VVj"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vri-cE-Ck6" userLabel="Bottom Picture View">
+                            <rect key="frame" x="0.0" y="133" width="252" height="119"/>
+                            <subviews>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNY-ZD-529" userLabel="Bottom Button">
+                                    <rect key="frame" x="0.0" y="0.0" width="252" height="119"/>
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                    <state key="normal" title="+"/>
+                                    <connections>
+                                        <action selector="selectSpot:" destination="-1" eventType="touchUpInside" id="5fd-yT-JjK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="236" id="05o-Ss-zUG"/>
-                                <constraint firstAttribute="height" constant="103" id="CtP-GI-odx"/>
+                                <constraint firstItem="YNY-ZD-529" firstAttribute="top" secondItem="Vri-cE-Ck6" secondAttribute="top" id="Dge-go-1bE"/>
+                                <constraint firstItem="YNY-ZD-529" firstAttribute="leading" secondItem="Vri-cE-Ck6" secondAttribute="leading" id="FeC-1g-L5Y"/>
+                                <constraint firstAttribute="bottom" secondItem="YNY-ZD-529" secondAttribute="bottom" id="eqb-UZ-VTf"/>
+                                <constraint firstAttribute="trailing" secondItem="YNY-ZD-529" secondAttribute="trailing" id="yEn-Qp-2cl"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
-                            <state key="normal" title="+"/>
-                            <connections>
-                                <action selector="didPressBottomButton:" destination="-1" eventType="touchUpInside" id="Pkb-TH-NYG"/>
-                            </connections>
-                        </button>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="119" id="9Gd-Oj-riM"/>
-                        <constraint firstItem="YNY-ZD-529" firstAttribute="centerY" secondItem="Vri-cE-Ck6" secondAttribute="centerY" id="BZA-DV-lLX"/>
-                        <constraint firstItem="YNY-ZD-529" firstAttribute="centerX" secondItem="Vri-cE-Ck6" secondAttribute="centerX" id="N0K-86-Q30"/>
-                        <constraint firstAttribute="width" constant="252" id="bdc-R4-VLy"/>
+                        <constraint firstItem="Vri-cE-Ck6" firstAttribute="height" secondItem="gJI-II-W2Q" secondAttribute="height" id="eeD-zb-meX"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYh-wt-UCo" userLabel="Upper Left Picture View">
-                    <rect key="frame" x="14" y="14" width="119" height="119"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRf-T1-M1A" userLabel="Upper Left Button">
-                            <rect key="frame" x="8" y="8" width="103" height="103"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="103" id="H5o-Qj-cak"/>
-                                <constraint firstAttribute="width" constant="103" id="Sgd-yf-ysS"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
-                            <state key="normal" title="+"/>
-                            <connections>
-                                <action selector="didPressUpperLeftButton:" destination="-1" eventType="touchUpInside" id="awb-iV-Cw8"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="119" id="1pb-M3-gk1"/>
-                        <constraint firstItem="WRf-T1-M1A" firstAttribute="centerY" secondItem="MYh-wt-UCo" secondAttribute="centerY" id="X3H-GV-14o"/>
-                        <constraint firstAttribute="width" constant="119" id="dpU-y5-9eJ"/>
-                        <constraint firstItem="WRf-T1-M1A" firstAttribute="centerX" secondItem="MYh-wt-UCo" secondAttribute="centerX" id="kCP-sA-FAr"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyb-Jq-FAd" userLabel="Upper Right Picture View">
-                    <rect key="frame" x="147" y="14" width="119" height="119"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5J-fx-qCB" userLabel="Upper Right Button">
-                            <rect key="frame" x="8" y="8" width="103" height="103"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="103" id="9m1-T6-eu3"/>
-                                <constraint firstAttribute="width" constant="103" id="YTw-B1-byL"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
-                            <state key="normal" title="+"/>
-                            <connections>
-                                <action selector="didPressUpperRightButton:" destination="-1" eventType="touchUpInside" id="OwL-1i-Jox"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="119" id="EVn-uv-wTv"/>
-                        <constraint firstItem="w5J-fx-qCB" firstAttribute="centerY" secondItem="cyb-Jq-FAd" secondAttribute="centerY" id="WxA-we-btj"/>
-                        <constraint firstItem="w5J-fx-qCB" firstAttribute="centerX" secondItem="cyb-Jq-FAd" secondAttribute="centerX" id="d7c-nG-BOS"/>
-                        <constraint firstAttribute="height" constant="119" id="hNO-hA-Cbg"/>
-                    </constraints>
-                </view>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="0.06330176442861557" green="0.40020579099655151" blue="0.59554183483123779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="cyb-Jq-FAd" firstAttribute="top" secondItem="eiZ-nj-TFH" secondAttribute="top" constant="14" id="0ir-Ki-acd"/>
-                <constraint firstItem="Vri-cE-Ck6" firstAttribute="top" secondItem="MYh-wt-UCo" secondAttribute="bottom" constant="14" id="6IU-EM-idV"/>
-                <constraint firstItem="Vri-cE-Ck6" firstAttribute="top" secondItem="cyb-Jq-FAd" secondAttribute="bottom" constant="14" id="6zU-ph-VU0"/>
-                <constraint firstItem="cyb-Jq-FAd" firstAttribute="leading" secondItem="MYh-wt-UCo" secondAttribute="trailing" constant="14" id="7gu-bJ-A0s"/>
-                <constraint firstItem="MYh-wt-UCo" firstAttribute="top" secondItem="eiZ-nj-TFH" secondAttribute="top" constant="14" id="BTl-GT-sUe"/>
-                <constraint firstItem="Vri-cE-Ck6" firstAttribute="centerX" secondItem="y1y-1k-jio" secondAttribute="centerX" id="NU6-Qe-OGa"/>
-                <constraint firstItem="eiZ-nj-TFH" firstAttribute="bottom" secondItem="Vri-cE-Ck6" secondAttribute="bottom" constant="14" id="VQn-C2-JJC"/>
-                <constraint firstItem="Vri-cE-Ck6" firstAttribute="trailing" secondItem="cyb-Jq-FAd" secondAttribute="trailing" id="lPv-m0-DH4"/>
+                <constraint firstItem="12b-Zu-9gb" firstAttribute="top" secondItem="y1y-1k-jio" secondAttribute="top" constant="14" id="6N1-gX-pmL"/>
+                <constraint firstItem="12b-Zu-9gb" firstAttribute="leading" secondItem="eiZ-nj-TFH" secondAttribute="leading" constant="14" id="Lgb-iI-Ora"/>
+                <constraint firstAttribute="bottom" secondItem="12b-Zu-9gb" secondAttribute="bottom" constant="14" id="SYQ-Ey-Pu0"/>
+                <constraint firstItem="eiZ-nj-TFH" firstAttribute="trailing" secondItem="12b-Zu-9gb" secondAttribute="trailing" constant="14" id="m3k-d6-wcE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="eiZ-nj-TFH"/>
-            <point key="canvasLocation" x="-24.375" y="-333.75"/>
+            <point key="canvasLocation" x="-157.5" y="-450.625"/>
         </view>
     </objects>
 </document>

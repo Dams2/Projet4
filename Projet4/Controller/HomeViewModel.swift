@@ -10,7 +10,7 @@ import Foundation
 
 final class HomeViewModel {
     
-    enum pictureConfiguration {
+    enum PictureConfiguration {
         case firstGrid, secondGrid, thirdGrid
     }
     
@@ -19,7 +19,7 @@ final class HomeViewModel {
     var titleText: ((String) -> Void)?
     var directionText: ((String) -> Void)?
     var swipeDirectionText: ((String) -> Void)?
-    var selectedConfiguration: ((pictureConfiguration) -> Void)?
+    var selectedConfiguration: ((PictureConfiguration) -> Void)?
     
     // Mark: - Input
     

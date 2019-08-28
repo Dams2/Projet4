@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		910BFB4323042B0100DB0915 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 910BFB4223042B0100DB0915 /* Delm-Medium.otf */; };
 		910BFB4523042B1300DB0915 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 910BFB4423042B1300DB0915 /* ThirstySoftRegular.otf */; };
+		910FD46D231540FA005DB272 /* GridViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FD46C231540FA005DB272 /* GridViewModelTests.swift */; };
 		9179DBD222F4980A00326069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179DBD122F4980A00326069 /* AppDelegate.swift */; };
 		9179DBD722F4980A00326069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9179DBD522F4980A00326069 /* Main.storyboard */; };
 		9179DBD922F4980D00326069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9179DBD822F4980D00326069 /* Assets.xcassets */; };
@@ -21,11 +22,9 @@
 		91936CCD230F037D0036074B /* SecondGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91936CCC230F037D0036074B /* SecondGrid.xib */; };
 		91936CCF230F03B80036074B /* ThirdGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91936CCE230F03B80036074B /* ThirdGrid.xib */; };
 		91936CD1230F06660036074B /* FirstGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD0230F06660036074B /* FirstGrid.swift */; };
-		91936CD2230F06660036074B /* FirstGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD0230F06660036074B /* FirstGrid.swift */; };
 		91936CD4230F067C0036074B /* SecondGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD3230F067C0036074B /* SecondGrid.swift */; };
-		91936CD5230F067C0036074B /* SecondGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD3230F067C0036074B /* SecondGrid.swift */; };
 		91936CD7230F06890036074B /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD6230F06890036074B /* ThirdGrid.swift */; };
-		91936CD8230F06890036074B /* ThirdGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91936CD6230F06890036074B /* ThirdGrid.swift */; };
+		91FDF0552313F3F800E90E3B /* UIKit + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FDF0542313F3F800E90E3B /* UIKit + UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +40,7 @@
 /* Begin PBXFileReference section */
 		910BFB4223042B0100DB0915 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../Instagrid/Instagrid/Delm-Medium.otf"; sourceTree = "<group>"; };
 		910BFB4423042B1300DB0915 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = ../../../Instagrid/Instagrid/ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		910FD46C231540FA005DB272 /* GridViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModelTests.swift; sourceTree = "<group>"; };
 		9179DBCE22F4980A00326069 /* Projet4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projet4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9179DBD122F4980A00326069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9179DBD622F4980A00326069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +60,7 @@
 		91936CD0230F06660036074B /* FirstGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGrid.swift; sourceTree = "<group>"; };
 		91936CD3230F067C0036074B /* SecondGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGrid.swift; sourceTree = "<group>"; };
 		91936CD6230F06890036074B /* ThirdGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdGrid.swift; sourceTree = "<group>"; };
+		91FDF0542313F3F800E90E3B /* UIKit + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 				9179DBF122F4987D00326069 /* Sources */,
 				9179DBF322F498D300326069 /* Controller */,
 				9179DBF422F498F100326069 /* View */,
+				91FDF0532313F39B00E90E3B /* Utils */,
 				9179DBF222F4989200326069 /* Ressources */,
 			);
 			path = Projet4;
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				9179DBE822F4980D00326069 /* Info.plist */,
+				910FD46C231540FA005DB272 /* GridViewModelTests.swift */,
 				91936CC8230EC07A0036074B /* HomeViewModelTests.swift */,
 				91936CC7230EC0790036074B /* Projet4Tests-Bridging-Header.h */,
 			);
@@ -185,6 +188,14 @@
 				91936CD6230F06890036074B /* ThirdGrid.swift */,
 			);
 			path = "Third Grid";
+			sourceTree = "<group>";
+		};
+		91FDF0532313F39B00E90E3B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91FDF0542313F3F800E90E3B /* UIKit + UIView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91936CD1230F06660036074B /* FirstGrid.swift in Sources */,
+				91FDF0552313F3F800E90E3B /* UIKit + UIView.swift in Sources */,
 				9179DBD222F4980A00326069 /* AppDelegate.swift in Sources */,
 				9179DBF622F4992000326069 /* HomeViewController.swift in Sources */,
 				9179DBFC22F4996E00326069 /* GridViewModel.swift in Sources */,
@@ -308,10 +320,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91936CD2230F06660036074B /* FirstGrid.swift in Sources */,
+				910FD46D231540FA005DB272 /* GridViewModelTests.swift in Sources */,
 				91936CC9230EC07A0036074B /* HomeViewModelTests.swift in Sources */,
-				91936CD5230F067C0036074B /* SecondGrid.swift in Sources */,
-				91936CD8230F06890036074B /* ThirdGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

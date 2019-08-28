@@ -8,11 +8,20 @@
 
 import Foundation
 
+protocol GridDelegate: class {
+    func didSelect(spot: Spot)
+}
+
+enum Spot: Int {
+    case top = 0
+    case topLeft = 1
+    case topRight = 2
+    case bottom = 3
+    case bottomLeft = 4
+    case bottomRight = 5
+}
+
 final class GridViewModel {
-    
-    enum Spot {
-        case top, topLeft, topRight, bottom, bottomLeft, bottomRight
-    }
     
      // Mark: - Outputs
     
@@ -21,6 +30,7 @@ final class GridViewModel {
      // Mark: - Inputs
     
     func didSelectSpot(at index: Int) {
-        
+        guard let spot = Spot(rawValue: index) else { return }
+        selectedSpot?(spot)
     }
 }

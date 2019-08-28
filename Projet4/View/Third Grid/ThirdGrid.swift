@@ -51,7 +51,26 @@ final class ThirdGrid: UIView, GridType {
     // Mark: - Action
     
     func set(image: UIImage, for spot: Spot) {
-    
+        let imageView = UIImageView(image: image)
+        switch spot {
+        case .topLeft:
+            upperLeftPictureView.removeAllSubviews()
+            imageView.frame = upperLeftPictureView.bounds
+            upperLeftPictureView.addSubview(imageView)
+        case .topRight:
+            upperRightPictureView.removeAllSubviews()
+            imageView.frame = upperRightPictureView.bounds
+            upperRightPictureView.addSubview(imageView)
+        case .bottomLeft:
+            bottomLeftPictureView.removeAllSubviews()
+            imageView.frame = bottomLeftPictureView.bounds
+            bottomLeftPictureView.addSubview(imageView)
+        case .bottomRight:
+            bottomRightPictureView.removeAllSubviews()
+            imageView.frame = bottomRightPictureView.bounds
+            bottomRightPictureView.addSubview(imageView)
+        default: break
+        }
     }
     
     func configure(with viewModelType: GridViewModel, delegate: GridDelegate) {

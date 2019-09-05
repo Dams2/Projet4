@@ -24,22 +24,30 @@ final class HomeViewModel {
     // Mark: - Input
     
     func viewDidLoad() {
-        titleText?("Instagrid")
-        directionText?("^")
-        swipeDirectionText?("Swipe-up")
-        selectedConfiguration?(.firstGrid)
+        self.titleText?("Instagrid")
+        self.directionText?("^")
+        self.swipeDirectionText?("Swipe-up")
+        DispatchQueue.main.async {
+            self.selectedConfiguration?(.firstGrid)
+        }
     }
     
     func didPressFirstGrid() {
-        selectedConfiguration?(.firstGrid)
+        DispatchQueue.main.async {
+            self.selectedConfiguration?(.firstGrid)
+        }
     }
     
     func didPressSecondGrid() {
-        selectedConfiguration?(.secondGrid)
+        DispatchQueue.main.async {
+            self.selectedConfiguration?(.secondGrid)
+        }
     }
     
     func didPressThirdGrid() {
-        selectedConfiguration?(.thirdGrid)
+        DispatchQueue.main.async {
+            self.selectedConfiguration?(.thirdGrid)
+        }
     }
     
     func didChangeToCompact() {

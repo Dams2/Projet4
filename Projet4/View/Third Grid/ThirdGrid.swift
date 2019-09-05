@@ -9,11 +9,11 @@
 import UIKit
 
 final class ThirdGrid: UIView, GridType {
-   
+    
     // Mark: - Outlets
-   
-    @IBOutlet var contentView: UIView!
-
+    
+    @IBOutlet private var contentView: UIView!
+    
     @IBOutlet private weak var upperLeftPictureView: UIView!
     @IBOutlet private weak var upperRightPictureView: UIView!
     @IBOutlet private weak var bottomLeftPictureView: UIView!
@@ -54,21 +54,21 @@ final class ThirdGrid: UIView, GridType {
         let imageView = UIImageView(image: image)
         switch spot {
         case .topLeft:
-            upperLeftPictureView.removeAllSubviews()
-            imageView.frame = upperLeftPictureView.bounds
-            upperLeftPictureView.addSubview(imageView)
+            upperLeftButton.removeAllSubviews()
+            imageView.frame = upperLeftButton.bounds
+            upperLeftButton.addSubview(imageView)
         case .topRight:
-            upperRightPictureView.removeAllSubviews()
-            imageView.frame = upperRightPictureView.bounds
-            upperRightPictureView.addSubview(imageView)
+            upperRightButton.removeAllSubviews()
+            imageView.frame = upperRightButton.bounds
+            upperRightButton.addSubview(imageView)
         case .bottomLeft:
-            bottomLeftPictureView.removeAllSubviews()
-            imageView.frame = bottomLeftPictureView.bounds
-            bottomLeftPictureView.addSubview(imageView)
+            bottomLeftButton.removeAllSubviews()
+            imageView.frame = bottomLeftButton.bounds
+            bottomLeftButton.addSubview(imageView)
         case .bottomRight:
-            bottomRightPictureView.removeAllSubviews()
-            imageView.frame = bottomRightPictureView.bounds
-            bottomRightPictureView.addSubview(imageView)
+            bottomRightButton.removeAllSubviews()
+            imageView.frame = bottomRightButton.bounds
+            bottomRightButton.addSubview(imageView)
         default: break
         }
     }

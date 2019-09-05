@@ -9,15 +9,15 @@
 import UIKit
 
 final class SecondGrid: UIView, GridType {
-
+    
     // Mark: - Outlets
     
-    @IBOutlet var contentView: UIView!
+    @IBOutlet private var contentView: UIView!
     
     @IBOutlet private weak var upperPictureView: UIView!
     @IBOutlet private weak var bottomLeftPictureView: UIView!
     @IBOutlet private weak var bottomRightPictureView: UIView!
-
+    
     @IBOutlet private weak var upperButton: UIButton!
     @IBOutlet private weak var bottomLeftButton: UIButton!
     @IBOutlet private weak var bottomRightButton: UIButton!
@@ -46,24 +46,24 @@ final class SecondGrid: UIView, GridType {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-
+    
     // Mark: - Action
     
     func set(image: UIImage, for spot: Spot) {
         let imageView = UIImageView(image: image)
         switch spot {
         case .top:
-            upperPictureView.removeAllSubviews()
-            imageView.frame = upperPictureView.bounds
-            upperPictureView.addSubview(imageView)
+            upperButton.removeAllSubviews()
+            imageView.frame = upperButton.bounds
+            upperButton.addSubview(imageView)
         case .bottomLeft:
-            bottomLeftPictureView.removeAllSubviews()
-            imageView.frame = bottomLeftPictureView.bounds
-            bottomLeftPictureView.addSubview(imageView)
+            bottomLeftButton.removeAllSubviews()
+            imageView.frame = bottomLeftButton.bounds
+            bottomLeftButton.addSubview(imageView)
         case .bottomRight:
-            bottomRightPictureView.removeAllSubviews()
-            imageView.frame = bottomRightPictureView.bounds
-            bottomRightPictureView.addSubview(imageView)
+            bottomRightButton.removeAllSubviews()
+            imageView.frame = bottomRightButton.bounds
+            bottomRightButton.addSubview(imageView)
         default: break
         }
     }

@@ -12,7 +12,7 @@ final class FirstGrid: UIView, GridType {
     
     // MARK: - Outlets
     
-    @IBOutlet var contentView: UIView!
+    @IBOutlet private var contentView: UIView!
     
     @IBOutlet private weak var bottomPictureView: UIView!
     @IBOutlet private weak var upperLeftPictureView: UIView!
@@ -27,19 +27,19 @@ final class FirstGrid: UIView, GridType {
     private var viewModel: GridViewModel!
     
     private weak var delegate: GridDelegate?
-
+    
     // Mark: - Init
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialize()
     }
-
+    
     private func initialize() {
         Bundle(for: type(of: self)).loadNibNamed(String(describing: FirstGrid.self), owner: self, options: nil)
         addSubview(contentView)
@@ -53,17 +53,17 @@ final class FirstGrid: UIView, GridType {
         let imageView = UIImageView(image: image)
         switch spot {
         case .topLeft:
-            upperLeftPictureView.removeAllSubviews()
-            imageView.frame = upperLeftPictureView.bounds
-            upperLeftPictureView.addSubview(imageView)
+            upperLeftButton.removeAllSubviews()
+            imageView.frame = upperLeftButton.bounds
+            upperLeftButton.addSubview(imageView)
         case .topRight:
-            upperRightPictureView.removeAllSubviews()
-            imageView.frame = upperRightPictureView.bounds
-            upperRightPictureView.addSubview(imageView)
+            upperRightButton.removeAllSubviews()
+            imageView.frame = upperRightButton.bounds
+            upperRightButton.addSubview(imageView)
         case .bottom:
-            bottomPictureView.removeAllSubviews()
-            imageView.frame = bottomPictureView.bounds
-            bottomPictureView.addSubview(imageView)
+            bottomButton.removeAllSubviews()
+            imageView.frame = bottomButton.bounds
+            bottomButton.addSubview(imageView)
         default: break
         }
     }
@@ -79,7 +79,7 @@ final class FirstGrid: UIView, GridType {
             self?.delegate?.didSelect(spot: spot)
         }
     }
-
+    
     @IBAction func selectSpot(_ sender: UIButton) {
         viewModel.didSelectSpot(at: sender.tag)
     }

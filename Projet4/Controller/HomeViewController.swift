@@ -37,7 +37,7 @@ final class HomeViewController: UIViewController {
             swipeDirectionLabel.textColor = UIColor.white
         }
     }
-  
+    
     @IBOutlet private weak var gridContainer: UIView!
     @IBOutlet private weak var firstGridButton: UIButton!
     @IBOutlet private weak var secondGridButton: UIButton!
@@ -89,7 +89,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         bind(to: viewModel)
         viewModel.viewDidLoad()
     }
@@ -102,16 +102,20 @@ final class HomeViewController: UIViewController {
         
         viewModel.selectedConfiguration = { [weak self] choice in
             guard let self = self else { return }
+            self.removeSelectedViews()
             switch choice {
             case .firstGrid:
                 let gridType = FirstGrid()
                 self.configureContainer(for: gridType)
+                self.setSelectedView(on: self.firstGridButton)
             case .secondGrid:
                 let gridType = SecondGrid()
                 self.configureContainer(for: gridType)
+                self.setSelectedView(on: self.secondGridButton)
             case .thirdGrid:
                 let gridType = ThirdGrid()
                 self.configureContainer(for: gridType)
+                self.setSelectedView(on: self.thirdGridButton)
             }
         }
         viewModel.swipeDirectionText = { [weak self] text in
@@ -121,7 +125,6 @@ final class HomeViewController: UIViewController {
             self?.directionLabel.text = text
         }
     }
-    
     
     // Mark: - Helpers
     
@@ -134,7 +137,7 @@ final class HomeViewController: UIViewController {
                               completion: { [weak self] _ in self?.sharePicture() })
         }
     }
-
+    
     private func sharePicture() {
         UIGraphicsBeginImageContext(gridContainer.frame.size)
         gridContainer.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -152,6 +155,19 @@ final class HomeViewController: UIViewController {
         self.gridContainer.layoutIfNeeded()
         gridView.frame = gridContainer.bounds
         self.gridContainer.addSubview(gridView)
+    }
+    
+    private func removeSelectedViews() {
+        firstGridButton.subviews.forEach { $0.removeImageView(with: "Selected") }
+        secondGridButton.subviews.forEach { $0.removeImageView(with: "Selected") }
+        thirdGridButton.subviews.forEach { $0.removeImageView(with: "Selected") }
+    }
+    
+    private func setSelectedView(on button: UIButton) {
+        let image = UIImage(named: "Selected")
+        let imageView = UIImageView(image: image)
+        imageView.frame = button.bounds
+        button.addSubview(imageView)
     }
     
     // Mark: - Trait Collection
@@ -201,3 +217,10 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
 }
 
+extension UIView {
+    func removeImageView(with name: String) {
+        if let view = self as? UIImageView, view.image == UIImage(named: name) {
+            view.removeFromSuperview()
+        }
+    }
+}

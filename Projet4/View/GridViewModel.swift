@@ -22,12 +22,12 @@ enum Spot: Int {
 }
 
 final class GridViewModel {
-
-    // MARK: - Outputs
-
+    
+     // Mark: - Outputs
+    
     var selectedSpot: ((Spot) -> Void)?
-
-    // MARK: - Inputs
+    
+     // Mark: - Inputs
     
     func didSelectSpot(at index: Int) {
         guard let spot = Spot(rawValue: index) else { return }

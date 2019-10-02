@@ -10,7 +10,7 @@
 import XCTest
 
 final class GridViewModelTests: XCTestCase {
-    
+
     func testGivenGridViewModel_WhenDidSelectSpotAtIndex0_ThenSelectedSpotIsCorrectlyReturned() {
         let viewModel = GridViewModel()
         let expectation = self.expectation(description: "Returned spot for index 0")
@@ -22,7 +22,7 @@ final class GridViewModelTests: XCTestCase {
         viewModel.didSelectSpot(at: 0)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenGridViewModel_WhenDidSelectSpotAtIndex1_ThenSelectedSpotIsCorrectlyReturned() {
         let viewModel = GridViewModel()
         let expectation = self.expectation(description: "Returned spot for index 1")
@@ -34,7 +34,7 @@ final class GridViewModelTests: XCTestCase {
         viewModel.didSelectSpot(at: 1)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenGridViewModel_WhenDidSelectSpotAtIndex2_ThenSelectedSpotIsCorrectlyReturned() {
         let viewModel = GridViewModel()
         let expectation = self.expectation(description: "Returned spot for index 2")
@@ -46,7 +46,7 @@ final class GridViewModelTests: XCTestCase {
         viewModel.didSelectSpot(at: 2)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenGridViewModel_WhenDidSelectSpotAtIndex3_ThenSelectedSpotIsCorrectlyReturned()  {
         let viewModel = GridViewModel()
         let expectation = self.expectation(description: "Returned spot for index 3")
@@ -58,7 +58,7 @@ final class GridViewModelTests: XCTestCase {
         viewModel.didSelectSpot(at: 3)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenGridViewModel_WhenDidSelectSpotAtIndex4_ThenSelectedSpotIsCorrectlyReturned() {
         let viewModel = GridViewModel()
         let expectation = self.expectation(description: "Returned spot for index 4")
@@ -70,7 +70,7 @@ final class GridViewModelTests: XCTestCase {
         viewModel.didSelectSpot(at: 4)
         waitForExpectations(timeout: 1.0, handler:  nil)
     }
-    
+
     func testGivenGridViewModel_WhenDidSelectSpotAtIndex5_ThenSelectedSpotIsCorrectlyReturned() {
         let viewModel = GridViewModel()
         let expectation = self.expectation(description: "Returned spot for index 5")
@@ -82,7 +82,7 @@ final class GridViewModelTests: XCTestCase {
         viewModel.didSelectSpot(at: 5)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenGridViewModel_WhenDidSelectSpotWithBigIndex_ThenNothingIsReturned() {
         let viewModel = GridViewModel()
         let expectation = self.expectation(description: "Returned spot for big index")
@@ -95,5 +95,4 @@ final class GridViewModelTests: XCTestCase {
         viewModel.didSelectSpot(at: 1000)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
 }

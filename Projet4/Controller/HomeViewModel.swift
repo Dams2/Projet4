@@ -14,6 +14,12 @@ final class HomeViewModel {
         case firstGrid, secondGrid, thirdGrid
     }
     
+    private var currentGrid: PictureConfiguration = .firstGrid {
+        didSet {
+            selectedConfiguration?(currentGrid)
+        }
+    }
+
     // Mark: - Output
     
     var titleText: ((String) -> Void)?
@@ -28,25 +34,25 @@ final class HomeViewModel {
         self.directionText?("^")
         self.swipeDirectionText?("Swipe-up")
         DispatchQueue.main.async {
-            self.selectedConfiguration?(.firstGrid)
+            self.currentGrid = .firstGrid
         }
     }
     
     func didPressFirstGrid() {
         DispatchQueue.main.async {
-            self.selectedConfiguration?(.firstGrid)
+            self.currentGrid = .firstGrid
         }
     }
     
     func didPressSecondGrid() {
         DispatchQueue.main.async {
-            self.selectedConfiguration?(.secondGrid)
+            self.currentGrid = .secondGrid
         }
     }
     
     func didPressThirdGrid() {
         DispatchQueue.main.async {
-            self.selectedConfiguration?(.thirdGrid)
+            self.currentGrid = .thirdGrid
         }
     }
     
@@ -58,5 +64,9 @@ final class HomeViewModel {
     func didChangeToRegular() {
         directionText?("<")
         swipeDirectionText?("Swipe-left to share")
+    }
+    
+    func didClearGrid()  {
+        selectedConfiguration?(currentGrid)
     }
 }

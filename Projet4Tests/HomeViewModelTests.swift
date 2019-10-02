@@ -11,7 +11,7 @@ import XCTest
 
 final class HomeViewModelTests: XCTestCase {
 
-    func testGivenHomeViewModel_WhenViewDidLoad_ThenTitletext_IsCorrectlyReturned() {
+    func testGivenAHomeViewModel_WhenViewDidLoad_ThenTitletext_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Title text returned")
 
@@ -22,7 +22,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.viewDidLoad()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenViewDidLoad_ThenDirectionText_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Direction text returned")
@@ -34,7 +34,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.viewDidLoad()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenViewDidLoad_ThenSwipeDirectionText_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Swipe direction text returned")
@@ -46,7 +46,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.viewDidLoad()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenViewDidLoad_ThenSelectedConfiguration_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Selected configuration returned")
@@ -58,7 +58,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.viewDidLoad()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenDidPressFirstGrid_ThenSelectedConfiguration_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Selected configuration returned for first grid ")
@@ -75,7 +75,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.didPressFirstGrid()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenDidPressSecondGrid_ThenSelectedConfiguration_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Selected configuration returned for second grid")
@@ -92,7 +92,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.didPressSecondGrid()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenDidPressThirdGrid_ThenSelectedConfiguration_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Selected configuration returned for third grid")
@@ -125,7 +125,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.didChangeToCompact()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenDidChangeToCompact_ThenSwipeDirectionText_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Swipe direction text returned for compact")
@@ -142,7 +142,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.didChangeToCompact()
         waitForExpectations(timeout: 1.0, handler:  nil)
     }
-    
+
     func testGivenAHomeViewmodel_WhenDidChangeToRegular_ThenDirectionText_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Direction text returned for regular")
@@ -159,7 +159,7 @@ final class HomeViewModelTests: XCTestCase {
         viewModel.didChangeToRegular()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
-    
+
     func testGivenHomeViewModel_WhenDidChangeToRegular_ThenSwipeDirectionText_IsCorrectlyReturned() {
         let viewModel = HomeViewModel()
         let expectation = self.expectation(description: "Swipe direction text returned for regular")
@@ -173,23 +173,6 @@ final class HomeViewModelTests: XCTestCase {
         }
         viewModel.viewDidLoad()
         viewModel.didChangeToRegular()
-        waitForExpectations(timeout: 1.0, handler: nil)
-    }
-    
-    func testGivenHomeViewModel_WhenDidClearGrid_ThenSelectedConfiguration_IsCorrectlyReturned() {
-        let viewModel = HomeViewModel()
-        let expectation = self.expectation(description: "Selected configuration returned for clear")
-
-        var counter = 0
-        viewModel.selectedConfiguration = { configuration in
-            if counter == 1 {
-                XCTAssertEqual(configuration, .firstGrid)
-                expectation.fulfill()
-            }
-            counter += 1
-        }
-        viewModel.viewDidLoad()
-        viewModel.didClearGrid()
         waitForExpectations(timeout: 1.0, handler: nil)
     }
 }

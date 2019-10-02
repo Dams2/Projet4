@@ -54,18 +54,28 @@ final class FirstGrid: UIView, GridType {
         switch spot {
         case .topLeft:
             upperLeftButton.removeAllSubviews()
-            imageView.frame = upperLeftButton.bounds
             upperLeftButton.addSubview(imageView)
+            makePictureConstraints(for: imageView, with: upperLeftButton)
         case .topRight:
             upperRightButton.removeAllSubviews()
-            imageView.frame = upperRightButton.bounds
             upperRightButton.addSubview(imageView)
+            makePictureConstraints(for: imageView, with: upperRightButton)
         case .bottom:
             bottomButton.removeAllSubviews()
-            imageView.frame = bottomButton.bounds
             bottomButton.addSubview(imageView)
+            makePictureConstraints(for: imageView, with: bottomButton)
         default: break
         }
+    }
+
+    private func makePictureConstraints(for image: UIImageView, with button: UIButton ) {
+        image.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            image.leftAnchor.constraint(equalTo: button.leftAnchor),
+            image.rightAnchor.constraint(equalTo: button.rightAnchor),
+            image.bottomAnchor.constraint(equalTo: button.bottomAnchor),
+            image.topAnchor.constraint(equalTo: button.topAnchor)
+        ])
     }
 
     func configure(with viewModelType: GridViewModel, delegate: GridDelegate) {

@@ -54,18 +54,28 @@ final class SecondGrid: UIView, GridType {
         switch spot {
         case .top:
             upperButton.removeAllSubviews()
-            imageView.frame = upperButton.bounds
             upperButton.addSubview(imageView)
+            makePictureConstraints(for: imageView, with: upperButton)
         case .bottomLeft:
             bottomLeftButton.removeAllSubviews()
-            imageView.frame = bottomLeftButton.bounds
             bottomLeftButton.addSubview(imageView)
+            makePictureConstraints(for: imageView, with: bottomLeftButton)
         case .bottomRight:
             bottomRightButton.removeAllSubviews()
-            imageView.frame = bottomRightButton.bounds
             bottomRightButton.addSubview(imageView)
+            makePictureConstraints(for: imageView, with: bottomRightButton)
         default: break
         }
+    }
+    
+    private func makePictureConstraints(for image: UIImageView, with button: UIButton ) {
+        image.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            image.leftAnchor.constraint(equalTo: button.leftAnchor),
+            image.rightAnchor.constraint(equalTo: button.rightAnchor),
+            image.bottomAnchor.constraint(equalTo: button.bottomAnchor),
+            image.topAnchor.constraint(equalTo: button.topAnchor)
+        ])
     }
 
     func configure(with viewModelType: GridViewModel, delegate: GridDelegate) {

@@ -78,6 +78,11 @@ final class HomeViewController: UIViewController {
 
     // Mark: - View life cycle
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureLayout()
+    }
+
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -87,14 +92,6 @@ final class HomeViewController: UIViewController {
 
         bind(to: viewModel)
         viewModel.viewDidLoad()
-    }
-
-    // refactoriser
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        configureLayout()
     }
 
     private func bind(to viewModel: HomeViewModel) {
@@ -150,9 +147,9 @@ final class HomeViewController: UIViewController {
         let activityVC = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         activityVC.completionWithItemsHandler = { _, completed, _, _ in
-            if completed {
-                self.viewModel.didClearGrid()
-            }
+//            if completed {
+//                self.viewModel.didClearGrid()
+//            }
         }
         self.present(activityVC, animated: true, completion: nil)
     }
@@ -161,14 +158,12 @@ final class HomeViewController: UIViewController {
         self.currentGrid = grid
         guard let gridView = grid as? UIView else { return }
         self.gridContainer.removeAllSubviews()
-        self.gridContainer.layoutIfNeeded()
         self.gridContainer.addSubview(gridView)
         self.makeConstraints(for: gridView, with: gridContainer)
     }
-
+    
     private func makeConstraints(for view1: UIView, with view2: UIView) {
-        view1.translatesAutoresizingMaskIntoConstraints = false // On enleve l'autolayout du storyboard
-        // On remet les contrainte par le code
+        view1.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             view1.leftAnchor.constraint(equalTo: view2.leftAnchor),
             view1.rightAnchor.constraint(equalTo: view2.rightAnchor),
@@ -206,7 +201,6 @@ final class HomeViewController: UIViewController {
             gridContainer.addGestureRecognizer(leftSwipeGestureRecognizer)
             viewModel.didChangeToRegular()
         }
-
     }
 
     // Mark: - Action

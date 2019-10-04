@@ -119,9 +119,11 @@ final class HomeViewController: UIViewController {
                 self.setSelectedView(on: self.thirdGridButton)
             }
         }
+
         viewModel.swipeDirectionText = { [weak self] text in
             self?.swipeDirectionLabel.text = text
         }
+
         viewModel.directionText = { [weak self] text in
             self?.directionLabel.text = text
         }
@@ -147,9 +149,9 @@ final class HomeViewController: UIViewController {
         let activityVC = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         activityVC.completionWithItemsHandler = { _, completed, _, _ in
-//            if completed {
-//                self.viewModel.didClearGrid()
-//            }
+            if completed {
+                self.viewModel.didClearGrid()
+            }
         }
         self.present(activityVC, animated: true, completion: nil)
     }
@@ -173,9 +175,17 @@ final class HomeViewController: UIViewController {
     }
 
     private func removeSelectedViews() {
-        firstGridButton.subviews.forEach { $0.removeImageView(with: "Selected") }
-        secondGridButton.subviews.forEach { $0.removeImageView(with: "Selected") }
-        thirdGridButton.subviews.forEach { $0.removeImageView(with: "Selected") }
+        if firstGridButton.subviews.count > 1 {
+            firstGridButton.subviews.last?.removeFromSuperview()
+        }
+
+        if secondGridButton.subviews.count > 1 {
+            secondGridButton.subviews.last?.removeFromSuperview()
+        }
+
+        if thirdGridButton.subviews.count > 1 {
+            thirdGridButton.subviews.last?.removeFromSuperview()
+        }
     }
 
     private func setSelectedView(on button: UIButton) {

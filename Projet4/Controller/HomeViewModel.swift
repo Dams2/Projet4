@@ -14,11 +14,9 @@ final class HomeViewModel {
         case firstGrid, secondGrid, thirdGrid
     }
     
-    private var currentGrid: PictureConfiguration? = nil {
+    private var currentGrid: PictureConfiguration = .firstGrid {
         didSet {
-            if let grid = currentGrid {
-                selectedConfiguration?(grid)
-            }
+            selectedConfiguration?(currentGrid)
         }
     }
 
@@ -69,6 +67,6 @@ final class HomeViewModel {
     }
     
     func didClearGrid()  {
-//        selectedConfiguration?(currentGrid)
+        selectedConfiguration?(currentGrid)
     }
 }
